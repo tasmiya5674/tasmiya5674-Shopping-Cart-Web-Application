@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="logo">ShopEasy</h1>
+        <ul class="nav-links">
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Product Listing -->
+    <main class="container">
+        <h2>Featured Products</h2>
+        <input type="text" id="search-bar" placeholder="Search for products..." class="search-bar">
+        <div id="product-list" class="product-list"></div>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Empty Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
